@@ -1,0 +1,19 @@
+﻿<Window x:Class="AdvancedControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdvancedControl"
+        xmlns:localControl="clr-namespace:AdvancedControl.Control"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280">
+    <Grid>
+        <Canvas>
+            <localControl:Instrument x:Name="Control_Instrument_01" Width="200" Height="200" Canvas.Left="50" Canvas.Top="50"/>
+            <localControl:Instrument x:Name="Control_Instrument_02" Width="200" Height="200" Canvas.Left="50" Canvas.Top="50"/>
+            <localControl:Clock x:Name="Control_Color_01" Width="200" Height="200" Canvas.Left="300" Canvas.Top="50"/>
+            <localControl:Clock x:Name="Control_Color_02" Width="200" Height="200" Canvas.Left="550" Canvas.Top="50"/>
+            <localControl:Clock x:Name="Control_Color_03" Width="200" Height="200" Canvas.Left="800" Canvas.Top="50"/>
+        </Canvas>
+    </Grid>
+</Window>

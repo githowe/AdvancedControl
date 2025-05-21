@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\NumberFonts\Italic_Small.png" />
+    <None Remove="Assets\NumberFonts\Italic_Small_Black.png" />
+    <None Remove="Assets\NumberFonts\MonitorPopup.png" />
+    <None Remove="Assets\NumberFonts\Normal_09.png" />
+    <None Remove="Assets\NumberFonts\Normal_11.png" />
+    <None Remove="Assets\NumberFonts\Science.png" />
+    <None Remove="Assets\NumberFonts\Time.png" />
+    <None Remove="Assets\NumberFonts\Time_20.png" />
+    <None Remove="Assets\NumberFonts\Time_Italic.png" />
+    <None Remove="Assets\NumberFonts\Time_Italic_Black.png" />
+    <None Remove="Assets\NumberFonts\Time_Record.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Control\Tool\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XLogic.Base\XLogic.Base.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\NumberFonts\Italic_Small.png" />
+    <Resource Include="Assets\NumberFonts\Italic_Small_Black.png" />
+    <Resource Include="Assets\NumberFonts\MonitorPopup.png" />
+    <Resource Include="Assets\NumberFonts\Normal_09.png" />
+    <Resource Include="Assets\NumberFonts\Normal_11.png" />
+    <Resource Include="Assets\NumberFonts\Science.png" />
+    <Resource Include="Assets\NumberFonts\Time.png" />
+    <Resource Include="Assets\NumberFonts\Time_20.png" />
+    <Resource Include="Assets\NumberFonts\Time_Italic.png" />
+    <Resource Include="Assets\NumberFonts\Time_Italic_Black.png" />
+    <Resource Include="Assets\NumberFonts\Time_Record.png" />
+  </ItemGroup>
+
+</Project>

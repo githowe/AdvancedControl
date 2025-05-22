@@ -81,21 +81,19 @@ namespace AdvancedControl.Control
             DateTime now = DateTime.Now;
             int msFrame = (int)(now.Millisecond / _msFrameLength);
             if (_lastTime.Hour != now.Hour || _lastTime.Minute != now.Minute || _lastTime.Second != now.Second || _msFrame != msFrame)
+            {
+                _lastTime = now;
+                _msFrame = msFrame;
                 UpdateClock();
-            _lastTime = now;
-            _msFrame = msFrame;
+            }
         }
 
         private void UpdateClock()
         {
-            // 计算指针角度
-            double 时针角度 = 30 * (_lastTime.Hour % 12) + 0.5 * _lastTime.Minute + 30 / 3600.0 * _lastTime.Second;
-            double 分针角度 = 6 * _lastTime.Minute + 0.1 * _lastTime.Second;
-            double 秒针角度 = 6 * _lastTime.Second + _msFrameAngle * _msFrame;
-            // 设置指针角度
-            _pointerLayer.时针角度 = 时针角度;
-            _pointerLayer.分针角度 = 分针角度;
-            _pointerLayer.秒针角度 = 秒针角度;
+            // 计算并设置指针角度
+            _pointerLayer.时针角度 = 30 * (_lastTime.Hour % 12) + 0.5 * _lastTime.Minute + 30 / 3600.0 * _lastTime.Second;
+            _pointerLayer.分针角度 = 6 * _lastTime.Minute + 0.1 * _lastTime.Second;
+            _pointerLayer.秒针角度 = 6 * _lastTime.Second + _msFrameAngle * _msFrame;
             // 更新指针
             _pointerLayer.Update();
         }

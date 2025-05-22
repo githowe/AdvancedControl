@@ -9,7 +9,11 @@ namespace AdvancedControl.Control
 {
     public partial class Instrument : UserControl
     {
+        #region 构造方法
+
         public Instrument() => InitializeComponent();
+
+        #endregion
 
         #region 表盘属性
 
@@ -84,6 +88,8 @@ namespace AdvancedControl.Control
         public bool ShowAxle { get; set; } = true;
 
         #endregion
+
+        #region 公开方法
 
         public void Init()
         {
@@ -161,6 +167,10 @@ namespace AdvancedControl.Control
             else _axleLayer.Clear();
         }
 
+        #endregion
+
+        #region 控件事件
+
         private void MainGrid_MouseWheel(object sender, MouseWheelEventArgs e)
         {
             _pointerLayer.Percent += e.Delta / 120 * 0.005;
@@ -169,6 +179,10 @@ namespace AdvancedControl.Control
             _pointerLayer.Update();
         }
 
+        #endregion
+
+        #region 字段
+
         private BackLayer _backLayer;
         private ScaleLayer _scaleLayer;
         private NumberLayer _numberLayer;
@@ -176,5 +190,7 @@ namespace AdvancedControl.Control
         private AxleLayer _axleLayer;
 
         private readonly List<InstrumentLayer> _layerList = new List<InstrumentLayer>();
+
+        #endregion
     }
 }
